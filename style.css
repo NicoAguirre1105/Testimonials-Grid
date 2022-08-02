@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --moderate_violet: hsl(263, 55%, 52%);
+    --very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light_gray: hsl(0, 0%, 81%);
+    --light_grayish_blue: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    padding: 10vh 6vw;
+    background-color: var(--light_grayish_blue);
+}
+
+main {
+    display: grid;
+    width: 100%;
+    row-gap: 30px;
+}
+
+main article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 8vw;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.avatar {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin: 25px 0 15px 0 ;
+}
+
+.avatar .text-container {
+    margin: auto 0;
+}
+
+.text-container h1 {
+    color: var(--white);
+    opacity: .8;
+    font-size: 15px;
+    line-height: normal;
+}
+
+.text-container p {
+    color: var(--white);
+    opacity: .5;
+    font-size: 13px;
+    line-height: normal;
+    margin: 0;
+}
+
+article h2 {
+    color: var(--white);
+    opacity: .9;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+article p {
+    color: var(--white);
+    opacity: .4;
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 20px 0 30px 0;
+}
+
+.Jeanette h1, 
+.Kira h1, 
+.Jeanette p, 
+.Kira p, 
+.Jeanette h2, 
+.Kira h2 {
+    color: var(--very_dark_blackish_blue);
+}
+
+.avatar img {
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Backgroud Colors */
+/* Backgroud Colors */
+
+.Daniel {
+    background-color: var(--moderate_violet);
+}
+
+.Jonathan {
+    background-color: var(--very_dark_grayish_blue);
+}
+
+.Jeanette {
+    background-color: var(--white);
+}
+
+.Patrick {
+    background-color: var(--very_dark_blackish_blue);
+}
+
+.Kira {
+    background-color: var(--white);
+}
+
+.quote-img{
+    position: absolute;
+    top: 0;
+    right: 8vw;
+}
+
+@media only screen and (min-width:1000px) {
+    
+    body {
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        margin: 0;
+        width: auto;
+        row-gap: 30px;
+        column-gap: 40px;
+        grid-template-columns: repeat(4, 250px);
+        grid-auto-rows: minmax(100px, 250px)
+    }
+    
+    main article {
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+    
+    .avatar {
+        height: 30px;
+    }
+    
+    .avatar .text-container {
+        margin: auto 0;
+    }
+    
+    .text-container h1 {
+        font-size: 13px;
+    }
+    
+    .text-container p {
+        font-size: 11px;
+    }
+    
+    article h2 {
+        font-size: 18px;
+    }
+    
+    article p {
+        font-size: 13px;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    
+    /* Backgroud Colors */
+    /* Backgroud Colors */
+    
+    .Daniel {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .Jonathan {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    
+    .Jeanette {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .Patrick {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+    .Kira {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    
+    .quote-img{
+        position: absolute;
+        top: 0;
+        right: 6vw;
+    }
+}
